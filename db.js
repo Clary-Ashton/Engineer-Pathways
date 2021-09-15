@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const db = new Sequelize("eps", "root", "", {
+const db = new Sequelize("eps_db", "root", "", {
   host: "localhost",
   dialect: "mysql",
 });
