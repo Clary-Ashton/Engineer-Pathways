@@ -1,0 +1,30 @@
+{
+  "name": "engineer-pathways",
+  "version": "1.0.0",
+  "description": "Full stack employee tracking application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mz0121coder/Engineer-Pathways.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mz0121coder/Engineer-Pathways/issues"
+  },
+  "homepage": "https://github.com/mz0121coder/Engineer-Pathways#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
