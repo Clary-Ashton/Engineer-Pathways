@@ -1,0 +1,32 @@
+<h1>All Employees</h1>
+<a class = “btn btn-primary mb-1” href=“/create”>Create Employee</a>
+<table class=“table table-bordered”>
+  <thead>
+    <tr>
+      <th scope=“col”>#</th>
+      <th scope=“col”>Name</th>
+      <th scope=“col”>Role</th>
+      <th scope=“col”>Preferred Language</th>
+      <th scope=“col”>Favourite Framework</th>
+      <th scope=“col”>Long Term Goal</th>
+      <th scope=“col”>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each users}}
+    <tr>
+      <th scope=“row”>{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.role}}</td>
+      <td>{{this.language}}</td>
+      <td>{{this.framework}}</td>
+      <td>{{this.goal}}</td>
+      <td>
+          <a class=“btn btn-primary” href=“/user/{{this.id}}“>View</a>
+          <a class=“btn btn-success” href=“/edit/{{this.id}}“>Edit</a>
+          <a class=“btn btn-danger” href=“/delete/{{this.id}}“>Delete</a>
+      </td>
+    </tr>
+ {{/each}}
+  </tbody>
+</table>
