@@ -1,4 +1,0 @@
-DROP DATABASE IF EXISTS eps_db;
-CREATE DATABASE eps_db;
-
-
