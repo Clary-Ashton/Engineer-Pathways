@@ -1,12 +1,13 @@
-const User = require(“../models/User”);
+const User = require("../models/User");
+
 const allUsers = async (req, res) => {
   const users = await User.findAll({
     raw: true,
   }).catch((error) => console.log(error));
-  await res.render(“home”, { users });
+  await res.render("home", { users });
 };
 const userForm = async (req, res) => {
-  await res.render(“create”);
+  await res.render("create");
 };
 const saveUser = async (req, res) => {
   const { name, role, language, framework, goal } = await req.body;
@@ -18,7 +19,7 @@ const saveUser = async (req, res) => {
     goal,
   }).catch((error) => console.log(error));
   console.log(user);
-  await res.redirect(“/”);
+  await res.redirect("/");
 };
 const editUser = async (req, res) => {
   const { id } = await req.params;
@@ -28,14 +29,15 @@ const editUser = async (req, res) => {
     },
     raw: true,
   }).catch((error) => console.log(error));
-  res.render(“edit”, { user });
+  res.render("edit", { user });
 };
 const updateUser = async (req, res) => {
   const { id } = req.params;
   const data = req.body;
   const selector = { where: { id: id } };
   await User.update(data, selector).catch((error) => console.log(error));
-  res.redirect(“/”);
+
+  res.redirect("/");
 };
 const viewUser = async (req, res) => {
   const { id } = req.params;
@@ -45,7 +47,7 @@ const viewUser = async (req, res) => {
     },
     raw: true,
   }).catch((error) => console.log(error));
-  res.render(“user”, { user });
+  res.render("user", { user });
 };
 const deleteUser = async (req, res) => {
   const { id } = req.params;
@@ -55,8 +57,10 @@ const deleteUser = async (req, res) => {
     },
     raw: true,
   }).catch((error) => console.log(error));
-  res.redirect(“/”);
+
+  res.redirect("/");
 };
+
 module.exports = {
   allUsers,
   userForm,
