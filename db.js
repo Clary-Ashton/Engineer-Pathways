@@ -1,8 +1,12 @@
 const Sequelize = require("sequelize");
-const db = new Sequelize("eps_db", "root", "", {
+const db_config = {
+  database: "eps",
+  username: "root",
+  password: "",
   host: "localhost",
   dialect: "mysql",
-});
+};
+const db = new Sequelize(process.env.JAWSDB_URL || db_config);
 
 module.exports = db;
 global.db = db;
