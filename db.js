@@ -6,7 +6,9 @@ const db_config = {
   host: "localhost",
   dialect: "mysql",
 };
-const db = new Sequelize(process.env.JAWSDB_URL || db_config);
+const db = new Sequelize(process.env.JAWSDB_URL || db_config, {
+  query: { raw: true },
+});
 
 module.exports = db;
 global.db = db;
