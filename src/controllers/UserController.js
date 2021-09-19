@@ -1,9 +1,8 @@
 const User = require("../models/User");
 
 const allUsers = async (req, res) => {
-  const users = await User.findAll({
-    raw: true,
-  }).catch((error) => console.log(error));
+  const users = await User.findAll().catch((error) => console.log(error));
+  console.log(users);
   await res.render("home", { users });
 };
 const userForm = async (req, res) => {
