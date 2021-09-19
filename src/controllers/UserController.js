@@ -2,7 +2,7 @@ const User = require("../models/User");
 
 const allUsers = async (req, res) => {
   const users = await User.findAll().catch((error) => console.log(error));
-  console.log(users);
+ 
   await res.render("home", { users });
 };
 const userForm = async (req, res) => {
@@ -26,7 +26,6 @@ const editUser = async (req, res) => {
     where: {
       id: id,
     },
-    raw: true,
   }).catch((error) => console.log(error));
   res.render("edit", { user });
 };
@@ -44,7 +43,6 @@ const viewUser = async (req, res) => {
     where: {
       id: id,
     },
-    raw: true,
   }).catch((error) => console.log(error));
   res.render("user", { user });
 };
@@ -54,7 +52,6 @@ const deleteUser = async (req, res) => {
     where: {
       id: id,
     },
-    raw: true,
   }).catch((error) => console.log(error));
 
   res.redirect("/");
