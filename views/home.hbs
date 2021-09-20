@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset=“utf-8”>
+        <meta charset="utf-8">
         <title>Engineer Pathways</title>
         <style>
             body{
@@ -9,7 +9,7 @@
                 margin: 0;
             }
             nav{
-                background: #FF5353;
+                background: #ff5353;
                 padding: 20px 10px;
             }
             nav ul{
@@ -42,15 +42,17 @@
   width: 33.33%;
   padding: 5px;
 }
+
 /* Clear floats after image containers */
 .row::after {
-  content: “”;
+  content: "";
   clear: both;
   display: table;
 }
 .row {
   display: flex;
 }
+
 .column {
   flex: 33.33%;
   padding: 5px;
@@ -66,9 +68,9 @@
     <body>
         <nav>
             <ul>
-                <li><a href=“/”>Logout</a></li>
-                <li><a href=“/”>Login</a></li>
-                <li><a href=“/”>Homepage</a></li>
+                <li><a href="/">Logout</a></li>
+                <li><a href="/">Login</a></li>
+                <li><a href="/">Homepage</a></li>
             </ul>
         </nav>
         <header>
@@ -77,48 +79,49 @@
         </header>
         <main>
             <p>Employee tracking application using node, express, handlebars and more</p>
-            <div class=“row”>
-  <div class=“column”>
-    <img src=“https://www.w3schools.com/howto/img_snow.jpg” alt=“Snow” style=“width:100%“>
+            <div class="row">
+  <div class="column">
+    <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="Snow" style="width:100%">
   </div>
-  <div class=“column”>
-    <img src=“https://www.w3schools.com/howto/img_forest.jpg” alt=“Forest” style=“width:100%“>
+  <div class="column">
+    <img src="https://www.w3schools.com/howto/img_forest.jpg" alt="Forest" style="width:100%">
   </div>
-  <div class=“column”>
-    <img src=“https://www.w3schools.com/howto/img_mountains.jpg” alt=“Mountains” style=“width:100%“>
+  <div class="column">
+    <img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="Mountains" style="width:100%">
   </div>
 </div>
         </main>
     </body>
 </html><h1>All Employees</h1>
-<a class = “btn btn-primary mb-1” href=“/create”>Create Employee</a>
-<table class=“table table-bordered”>
+<a class = "btn btn-primary mb-1" href="/create">Create Employee</a>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th scope=“col”>#</th>
-      <th scope=“col”>Name</th>
-      <th scope=“col”>Role</th>
-      <th scope=“col”>Preferred Language</th>
-      <th scope=“col”>Favourite Framework</th>
-      <th scope=“col”>Long Term Goal</th>
-      <th scope=“col”>Action</th>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Role</th>
+      <th scope="col">Preferred Language</th>
+      <th scope="col">Favourite Framework</th>
+      <th scope="col">Long Term Goal</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
       {{#each users}}
     <tr>
-      <th scope=“row”>{{this.id}}</th>
+      <th scope="row">{{this.id}}</th>
       <td>{{this.name}}</td>
       <td>{{this.role}}</td>
       <td>{{this.language}}</td>
       <td>{{this.framework}}</td>
       <td>{{this.goal}}</td>
       <td>
-          <a class=“btn btn-primary” href=“/user/{{this.id}}“>View</a>
-          <a class=“btn btn-success” href=“/edit/{{this.id}}“>Edit</a>
-          <a class=“btn btn-danger” href=“/delete/{{this.id}}“>Delete</a>
+          <a class="btn btn-primary" href="/user/{{this.id}}">View</a>
+          <a class="btn btn-success" href="/edit/{{this.id}}">Edit</a>
+          <a class="btn btn-danger" href="/delete/{{this.id}}">Delete</a>
       </td>
     </tr>
  {{/each}}
+
   </tbody>
 </table>
