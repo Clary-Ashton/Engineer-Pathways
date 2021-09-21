@@ -24,3 +24,5 @@ Download or clone this repo, navigate to where you have stored the folder and fo
 4. In your browser, you can now use the system on `localhost:3000`.
 
 ## Demo
+
+## Screenshots
