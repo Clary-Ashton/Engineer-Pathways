@@ -17,3 +17,9 @@ ALSO there is the functionality to view/edit/delete this information as required
 ```
 
 ## Instructions
+Download or clone this repo, navigate to where you have stored the folder and follow these steps:
+1. Open integrated terminal or use your main CLI.
+2. Run `npm install` to set up dependencies.
+3. Use `npm start` command to run the app locally.
+4. In your browser, you can now use the system on `localhost:3000`.
+
