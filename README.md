@@ -15,3 +15,5 @@ WHEN I start the application
 I AM given the option to add each employee's id, name, role, preferred language, favourite framework/technologies and ideal working style
 ALSO there is the functionality to view/edit/delete this information as required
 ```
+
+## Instructions
