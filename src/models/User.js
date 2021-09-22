@@ -1,6 +1,7 @@
+//require db connection
 const Sequelize = require("sequelize");
 const db = require("../../db");
-
+//
 module.exports = db.define("User", {
   id: {
     type: Sequelize.INTEGER,
