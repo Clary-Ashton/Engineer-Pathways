@@ -1,3 +1,4 @@
+// config db
 const Sequelize = require("sequelize");
 const db_config = {
   database: "eps",
@@ -6,7 +7,7 @@ const db_config = {
   host: "localhost",
   dialect: "mysql",
 };
- 
+
 const db = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL, {
       query: { raw: true },
@@ -16,6 +17,6 @@ const db = process.env.JAWSDB_URL
       dialect: db_config.dialect,
       query: { raw: true },
     });
- 
+
 module.exports = db;
 global.db = db;

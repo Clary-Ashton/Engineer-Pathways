@@ -1,13 +1,15 @@
+// require employee profile, create details
 const User = require("../models/User");
 
 const allUsers = async (req, res) => {
   const users = await User.findAll().catch((error) => console.log(error));
- 
+
   await res.render("home", { users });
 };
 const userForm = async (req, res) => {
   await res.render("create");
 };
+// functionality to save/edit/view/delete employees
 const saveUser = async (req, res) => {
   const { name, role, language, framework, goal } = await req.body;
   const user = await User.create({
