@@ -1,8 +1,9 @@
+// require employee profile, create details
 const User = require("../models/User");
 
 const allUsers = async (req, res) => {
   const users = await User.findAll().catch((error) => console.log(error));
- 
+
   await res.render("home", { users });
 };
 const userForm = async (req, res) => {
