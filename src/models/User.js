@@ -12,26 +12,26 @@ module.exports = db.define("User", {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+    unique: false,
   },
   role: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+    unique: false,
   },
   language: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+    unique: false,
   },
   framework: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+    unique: false,
   },
   goal: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+    unique: false,
   },
 });
