@@ -12,7 +12,7 @@ app.set("view engine", "hbs");
 app.use("/", router);
 
 db.sync({
-  force: false,
+  force: true,
 }).then(() => {
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
