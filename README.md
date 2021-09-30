@@ -19,12 +19,19 @@ ALSO there is the functionality to view/edit/delete this information as required
 
 ## Instructions
 
+Before setup, install [XAMPP](https://www.apachefriends.org/download.html) and use it to create a database called "eps" (check specific steps for your device with google/youtube).
+
 Download or clone this repo, navigate to where you have stored the folder and follow these steps:
 
 1. Open integrated terminal or use your main CLI.
 2. Run `npm install` to set up dependencies.
-3. Use `npm start` command to run the app locally.
-4. In your browser, you can now use the system on `localhost:3000`.
+3. Run `npx sequelize-cli init` then `npx sequelize-cli db:migrate`  
+   to migrate database to XAMPP for testing/development.  
+   NOTE (these 2 commands use npx, not npm)
+4. Use `npm start` command to run the app locally.
+5. In your browser, you can now use the system on `localhost:3000`.
+
+Alternatively, just run the app on Heroku using the link provided above.
 
 ## Screenshot
 
